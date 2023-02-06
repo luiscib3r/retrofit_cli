@@ -1,6 +1,6 @@
 ## retrofit_cli
 
-Dart Retrofit API Generator
+Dart Retrofit API Generator (🚧 under construction 🚧)
 
 ### Install
 

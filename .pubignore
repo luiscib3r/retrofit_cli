@@ -1,0 +1,13 @@
+.dart_tool/
+.packages
+build/
+pubspec.lock
+
+.test_coverage.dart
+coverage/
+.test_runner.dart
+
+.idea
+
+api/
+bricks/
