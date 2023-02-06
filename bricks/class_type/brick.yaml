@@ -1,0 +1,7 @@
+name: class_type
+description: Class generator.
+
+version: 0.1.0+1
+
+environment:
+  mason: '>=0.1.0-dev.41 <0.1.0'

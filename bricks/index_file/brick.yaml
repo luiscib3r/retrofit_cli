@@ -1,0 +1,7 @@
+name: index_file
+description: Index File Generator.
+
+version: 0.1.0+1
+
+environment:
+  mason: '>=0.1.0-dev.41 <0.1.0'

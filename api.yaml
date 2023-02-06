@@ -1,0 +1,73 @@
+name: Todos
+endpoints:
+  - name: getTodos
+    method: GET
+    url: /todos
+    response: |
+      [
+        {
+          "id": "idstring",
+          "name": "todo name",
+          "description": "todo description",
+          "price": 2.5,
+          "count": 3
+        }
+      ]
+  - name: getTodo
+    method: GET
+    url: /todos/{id}
+    paths:
+      - id: String
+    response: |
+      {
+        "id": "idstring",
+        "name": "todo name",
+        "description": "todo description",
+        "price": 2.5,
+        "count": 3
+      }
+  - name: saveTodo
+    method: POST
+    url: /todos
+    headers:
+      - Authorization
+    payload: |
+      {
+        "name": "todo name",
+        "description": "todo description"
+      }
+    response: |
+      {
+        "id": "idstring",
+        "name": "todo",
+        "description": "desc1",
+        "price": 0.0,
+        "count": 0
+      }
+  - name: updateTodo
+    method: PUT
+    url: /todos/{id}
+    headers:
+      - Authorization
+    paths:
+      - id: String
+    payload: |
+      {
+        "name": "new todo name",
+        "description": "new todo description"
+      }
+    response: |
+      {
+        "id": "idstring",
+        "name": "new todo name",
+        "description": "new todo description"
+      }
+  - name: deleteTodo
+    method: DELETE
+    url: /todos/{id}
+    headers:
+      - Authorization
+    paths:
+      - id: String
+    response: |
+      {}
