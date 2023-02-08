@@ -3,6 +3,10 @@ endpoints:
   - name: getTodos
     method: GET
     url: /todos
+    params:
+      - name: String
+      - description: String
+      - count: int
     response: |
       [
         {

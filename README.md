@@ -1,6 +1,7 @@
 ## retrofit_cli
 
-Dart Retrofit API Generator (🚧 under construction 🚧)
+Dart [Retrofit](https://pub.dev/packages/retrofit) API Generator (🚧 under
+construction 🚧)
 
 ### Install
 
@@ -24,6 +25,8 @@ make install
 
 ### Usage
 
+#### 1. Define your api using a yaml file
+
 #### Example of `api.yaml`
 
 ```yaml
@@ -32,6 +35,10 @@ endpoints:
   - name: getTodos
     method: GET
     url: /todos
+    params:
+      - name: String
+      - description: String
+      - count: int
     response: |
       [
         {
@@ -102,13 +109,21 @@ endpoints:
       {}
 ```
 
+#### 2. Generate api package using retrofit_cli
+
+**Default**
+
 ```sh
 retrofit_cli api
 ```
 
+**Set output package folder (default is api)**
+
 ```sh
 retrofit_cli api -o api_package_name
 ```
+
+**Set input .yaml file (default is api.yaml)**
 
 ```sh
 retrofit_cli api -o api_package_name -i my_api.yaml

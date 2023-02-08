@@ -25,6 +25,9 @@ abstract class {{name.pascalCase()}}Api {
     {{#paths}}
     @Path('{{name}}') required {{type}} {{name.camelCase()}},
     {{/paths}}
+    {{#params}}
+    @Query('{{name}}') {{type}}? {{name.camelCase()}},
+    {{/params}}
     {{#payload}}
     @Body() required {{#payload.isList}}List<{{/payload.isList}}{{payload.name.pascalCase()}}{{#payload.isList}}>{{/payload.isList}} payload,
     {{/payload}}

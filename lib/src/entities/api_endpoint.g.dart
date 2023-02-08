@@ -18,7 +18,10 @@ ApiEndpoint _$ApiEndpointFromJson(Map<String, dynamic> json) => ApiEndpoint(
           .map((e) => EndpointHeader.fromJson(e as Map<String, dynamic>))
           .toList(),
       paths: (json['paths'] as List<dynamic>)
-          .map((e) => EndpointPath.fromJson(e as Map<String, dynamic>))
+          .map((e) => EndpointParam.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      params: (json['params'] as List<dynamic>)
+          .map((e) => EndpointParam.fromJson(e as Map<String, dynamic>))
           .toList(),
       emptyArgs: json['emptyArgs'] as bool,
       open: json['open'] as String? ?? '{',
@@ -34,6 +37,7 @@ Map<String, dynamic> _$ApiEndpointToJson(ApiEndpoint instance) =>
       'response': instance.response.toJson(),
       'headers': instance.headers.map((e) => e.toJson()).toList(),
       'paths': instance.paths.map((e) => e.toJson()).toList(),
+      'params': instance.params.map((e) => e.toJson()).toList(),
       'emptyArgs': instance.emptyArgs,
       'open': instance.open,
       'close': instance.close,

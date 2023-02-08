@@ -4,34 +4,36 @@ import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:yaml/yaml.dart';
 
-part 'endpoint_path.g.dart';
+part 'endpoint_param.g.dart';
 
 @JsonSerializable(explicitToJson: true)
-class EndpointPath extends Equatable {
-  const EndpointPath({
+class EndpointParam extends Equatable {
+  const EndpointParam({
     required this.name,
     required this.type,
   });
 
-  factory EndpointPath.fromYaml(YamlMap doc) => EndpointPath(
+  factory EndpointParam.fromYaml(YamlMap doc) => EndpointParam(
         name: doc.keys.first as String,
-        type: pathTypeFromString(doc.values.first as String),
+        type: paramTypeFromString(doc.values.first as String),
       );
 
-  factory EndpointPath.fromJson(Map<String, dynamic> json) =>
-      _$EndpointPathFromJson(json);
+  factory EndpointParam.fromJson(Map<String, dynamic> json) =>
+      _$EndpointParamFromJson(json);
 
-  Map<String, dynamic> toJson() => _$EndpointPathToJson(this);
+  Map<String, dynamic> toJson() => _$EndpointParamToJson(this);
 
   final String name;
-  final PathType type;
+  final ParamType type;
 
-  static PathType pathTypeFromString(String value) {
+  static ParamType paramTypeFromString(String value) {
     switch (value.trim().toLowerCase()) {
       case 'string':
-        return PathType.String;
+        return ParamType.String;
       case 'int':
-        return PathType.int;
+        return ParamType.int;
+      case 'double':
+        return ParamType.double;
       default:
         throw UnrecognizedPathType(value);
     }
@@ -41,9 +43,10 @@ class EndpointPath extends Equatable {
   List<Object?> get props => [name, type];
 }
 
-enum PathType {
+enum ParamType {
   String,
-  int;
+  int,
+  double,
 }
 
 class UnrecognizedPathType implements Exception {

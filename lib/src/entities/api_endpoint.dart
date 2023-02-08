@@ -18,6 +18,7 @@ class ApiEndpoint extends Equatable {
     required this.response,
     required this.headers,
     required this.paths,
+    required this.params,
     required this.emptyArgs,
     this.open = '{',
     this.close = '}',
@@ -40,6 +41,8 @@ class ApiEndpoint extends Equatable {
 
       final paths = doc['paths'] != null ? doc['paths'] as YamlList : null;
 
+      final params = doc['params'] != null ? doc['params'] as YamlList : null;
+
       return ApiEndpoint(
         name: name,
         method: ApiMethod.fromString(doc['method'] as String),
@@ -61,10 +64,18 @@ class ApiEndpoint extends Equatable {
             : const [],
         paths: paths != null
             ? paths.nodes
-                .map((e) => EndpointPath.fromYaml(e as YamlMap))
+                .map((e) => EndpointParam.fromYaml(e as YamlMap))
                 .toList()
             : const [],
-        emptyArgs: paths == null && payload == null && headers == null,
+        params: params != null
+            ? params.nodes
+                .map((e) => EndpointParam.fromYaml(e as YamlMap))
+                .toList()
+            : const [],
+        emptyArgs: paths == null &&
+            payload == null &&
+            headers == null &&
+            params == null,
       );
     } on FormatException catch (e) {
       logger
@@ -90,7 +101,8 @@ class ApiEndpoint extends Equatable {
   final ClassType? payload;
   final ClassType response;
   final List<EndpointHeader> headers;
-  final List<EndpointPath> paths;
+  final List<EndpointParam> paths;
+  final List<EndpointParam> params;
   final bool emptyArgs;
   // Curly
   final String open;
@@ -105,6 +117,7 @@ class ApiEndpoint extends Equatable {
         response,
         headers,
         paths,
+        params,
         emptyArgs,
         open,
         close,
