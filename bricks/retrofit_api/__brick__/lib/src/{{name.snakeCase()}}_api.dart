@@ -1,4 +1,4 @@
-import 'package:diox/diox.dart';
+import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:{{name.snakeCase()}}_api/{{name.snakeCase()}}_api.dart';
 
