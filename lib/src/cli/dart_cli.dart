@@ -67,7 +67,7 @@ class Dart {
         try {
           await _Cmd.run(
             'dart',
-            ['pub', 'get', '--offline'],
+            ['pub', 'get'],
             workingDirectory: cwd,
             logger: logger,
           );
