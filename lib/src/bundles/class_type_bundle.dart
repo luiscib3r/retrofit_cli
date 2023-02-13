@@ -3,24 +3,4 @@
 
 import 'package:mason/mason.dart';
 
-final classTypeBundle = MasonBundle.fromJson(<String, dynamic>{
-  "files": [
-    {
-      "path": "lib/src/{{folderName.snakeCase()}}/{{name.snakeCase()}}.dart",
-      "data":
-          "aW1wb3J0ICdwYWNrYWdlOmVxdWF0YWJsZS9lcXVhdGFibGUuZGFydCc7CmltcG9ydCAncGFja2FnZTpqc29uX2Fubm90YXRpb24vanNvbl9hbm5vdGF0aW9uLmRhcnQnOwppbXBvcnQgJ3BhY2thZ2U6e3thcGlOYW1lLnNuYWtlQ2FzZSgpfX1fYXBpL3t7YXBpTmFtZS5zbmFrZUNhc2UoKX19X2FwaS5kYXJ0JzsKCnBhcnQgJ3t7bmFtZS5zbmFrZUNhc2UoKX19LmcuZGFydCc7CgpASnNvblNlcmlhbGl6YWJsZShleHBsaWNpdFRvSnNvbjogdHJ1ZSkKY2xhc3Mge3tuYW1lLnBhc2NhbENhc2UoKX19IGV4dGVuZHMgRXF1YXRhYmxlIHsKICBjb25zdCB7e25hbWUucGFzY2FsQ2FzZSgpfX0oewogICAge3sjZmllbGRzfX0KICAgIHJlcXVpcmVkIHRoaXMue3tuYW1lLmNhbWVsQ2FzZSgpfX0sCiAgICB7ey9maWVsZHN9fQogIH0pOwoKICBmYWN0b3J5IHt7bmFtZS5wYXNjYWxDYXNlKCl9fS5mcm9tSnNvbihNYXA8U3RyaW5nLCBkeW5hbWljPiBqc29uKSA9PiBfJHt7bmFtZS5wYXNjYWxDYXNlKCl9fUZyb21Kc29uKGpzb24pOwoKICBNYXA8U3RyaW5nLCBkeW5hbWljPiB0b0pzb24oKSA9PiBfJHt7bmFtZS5wYXNjYWxDYXNlKCl9fVRvSnNvbih0aGlzKTsKCiAge3sjZmllbGRzfX0KICBASnNvbktleShuYW1lOiAne3tuYW1lfX0nKQogIGZpbmFsIHt7I2lzTGlzdH19TGlzdDx7ey9pc0xpc3R9fXt7XnR5cGUuaXNQcmltaXRpdmV9fXt7dHlwZS5uYW1lLnBhc2NhbENhc2UoKX19e3svdHlwZS5pc1ByaW1pdGl2ZX19e3sjdHlwZS5pc1ByaW1pdGl2ZX19e3t0eXBlLm5hbWV9fXt7L3R5cGUuaXNQcmltaXRpdmV9fXt7I2lzTGlzdH19Pnt7L2lzTGlzdH19IHt7bmFtZS5jYW1lbENhc2UoKX19OwogIHt7L2ZpZWxkc319CgogIEBvdmVycmlkZQogIExpc3Q8T2JqZWN0Pz4gZ2V0IHByb3BzID0+IFsKICAgIHt7I2ZpZWxkc319CiAgICAgIHt7bmFtZS5jYW1lbENhc2UoKX19LAogICAge3svZmllbGRzfX0KICBdOwoKICBAb3ZlcnJpZGUKICBib29sPyBnZXQgc3RyaW5naWZ5ID0+IHRydWU7Cn0K",
-      "type": "text"
-    }
-  ],
-  "hooks": [],
-  "name": "class_type",
-  "description": "Class generator.",
-  "version": "0.1.0+1",
-  "environment": {"mason": ">=0.1.0-dev.41 <0.1.0"},
-  "readme": {
-    "path": "README.md",
-    "data": "IyBjbGFzc190eXBlCg==",
-    "type": "text"
-  },
-  "vars": {}
-});
+final classTypeBundle = MasonBundle.fromJson(<String, dynamic>{"files":[{"path":"lib/src/{{folderName.snakeCase()}}/{{name.snakeCase()}}.dart","data":"aW1wb3J0ICdwYWNrYWdlOmVxdWF0YWJsZS9lcXVhdGFibGUuZGFydCc7DQppbXBvcnQgJ3BhY2thZ2U6anNvbl9hbm5vdGF0aW9uL2pzb25fYW5ub3RhdGlvbi5kYXJ0JzsNCmltcG9ydCAncGFja2FnZTp7e2FwaU5hbWUuc25ha2VDYXNlKCl9fV9hcGkve3thcGlOYW1lLnNuYWtlQ2FzZSgpfX1fYXBpLmRhcnQnOw0KDQpwYXJ0ICd7e25hbWUuc25ha2VDYXNlKCl9fS5nLmRhcnQnOw0KDQpASnNvblNlcmlhbGl6YWJsZShleHBsaWNpdFRvSnNvbjogdHJ1ZSkNCmNsYXNzIHt7bmFtZS5wYXNjYWxDYXNlKCl9fSBleHRlbmRzIEVxdWF0YWJsZSB7DQogIGNvbnN0IHt7bmFtZS5wYXNjYWxDYXNlKCl9fSh7DQogICAge3sjZmllbGRzfX0NCiAgICByZXF1aXJlZCB0aGlzLnt7bmFtZS5jYW1lbENhc2UoKX19LA0KICAgIHt7L2ZpZWxkc319DQogIH0pOw0KDQogIGZhY3Rvcnkge3tuYW1lLnBhc2NhbENhc2UoKX19LmZyb21Kc29uKE1hcDxTdHJpbmcsIGR5bmFtaWM+IGpzb24pID0+IF8ke3tuYW1lLnBhc2NhbENhc2UoKX19RnJvbUpzb24oanNvbik7DQoNCiAgTWFwPFN0cmluZywgZHluYW1pYz4gdG9Kc29uKCkgPT4gXyR7e25hbWUucGFzY2FsQ2FzZSgpfX1Ub0pzb24odGhpcyk7DQoNCiAge3sjZmllbGRzfX0NCiAgQEpzb25LZXkobmFtZTogJ3t7bmFtZX19JykNCiAgZmluYWwge3sjaXNMaXN0fX1MaXN0PHt7L2lzTGlzdH19e3tedHlwZS5pc1ByaW1pdGl2ZX19e3t0eXBlLm5hbWUucGFzY2FsQ2FzZSgpfX17ey90eXBlLmlzUHJpbWl0aXZlfX17eyN0eXBlLmlzUHJpbWl0aXZlfX17e3R5cGUubmFtZX19e3svdHlwZS5pc1ByaW1pdGl2ZX19e3sjaXNMaXN0fX0+e3svaXNMaXN0fX0ge3tuYW1lLmNhbWVsQ2FzZSgpfX07DQogIHt7L2ZpZWxkc319DQoNCiAgQG92ZXJyaWRlDQogIExpc3Q8T2JqZWN0Pz4gZ2V0IHByb3BzID0+IFsNCiAgICB7eyNmaWVsZHN9fQ0KICAgICAge3tuYW1lLmNhbWVsQ2FzZSgpfX0sDQogICAge3svZmllbGRzfX0NCiAgXTsNCg0KICBAb3ZlcnJpZGUNCiAgYm9vbD8gZ2V0IHN0cmluZ2lmeSA9PiB0cnVlOw0KfQ0K","type":"text"}],"hooks":[],"name":"class_type","description":"Class generator.","version":"0.1.0+1","environment":{"mason":">=0.1.0-dev.41 <0.1.0"},"readme":{"path":"README.md","data":"IyBjbGFzc190eXBlDQo=","type":"text"},"vars":{}});

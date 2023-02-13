@@ -3,25 +3,4 @@
 
 import 'package:mason/mason.dart';
 
-final indexFileBundle = MasonBundle.fromJson(<String, dynamic>{
-  "files": [
-    {
-      "path":
-          "lib/src/{{folderName.snakeCase()}}/{{folderName.snakeCase()}}.dart",
-      "data":
-          "e3sjZmlsZXN9fQpleHBvcnQgJ3t7bmFtZS5zbmFrZUNhc2UoKX19LmRhcnQnOwp7ey9maWxlc319",
-      "type": "text"
-    }
-  ],
-  "hooks": [],
-  "name": "index_file",
-  "description": "Index File Generator.",
-  "version": "0.1.0+1",
-  "environment": {"mason": ">=0.1.0-dev.41 <0.1.0"},
-  "readme": {
-    "path": "README.md",
-    "data": "IyBpbmRleF9maWxlCg==",
-    "type": "text"
-  },
-  "vars": {}
-});
+final indexFileBundle = MasonBundle.fromJson(<String, dynamic>{"files":[{"path":"lib/src/{{folderName.snakeCase()}}/{{folderName.snakeCase()}}.dart","data":"e3sjZmlsZXN9fQ0KZXhwb3J0ICd7e25hbWUuc25ha2VDYXNlKCl9fS5kYXJ0JzsNCnt7L2ZpbGVzfX0=","type":"text"}],"hooks":[],"name":"index_file","description":"Index File Generator.","version":"0.1.0+1","environment":{"mason":">=0.1.0-dev.41 <0.1.0"},"readme":{"path":"README.md","data":"IyBpbmRleF9maWxlDQo=","type":"text"},"vars":{}});

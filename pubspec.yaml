@@ -1,6 +1,6 @@
 name: retrofit_cli
 description: Retrofit code generator.
-version: 0.1.0-dev.3
+version: 0.1.0-dev.4
 homepage: https://github.com/luiscib3r/retrofit_cli
 repository: https://github.com/luiscib3r/retrofit_cli
 issue_tracker: https://github.com/luiscib3r/retrofit_cli/issues

@@ -1,10 +1,10 @@
-import 'package:dio/dio.dart';
+import 'package:diox/diox.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:{{name.snakeCase()}}_api/{{name.snakeCase()}}_api.dart';
 
 export 'models/models.dart';
-export 'responses/responses.dart';
 export 'payloads/payloads.dart';
+export 'responses/responses.dart';
 
 part '{{name.snakeCase()}}_api.g.dart';
 
