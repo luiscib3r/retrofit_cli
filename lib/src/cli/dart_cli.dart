@@ -13,9 +13,9 @@ class Dart {
   }
 
   static Future<void> applyFixes({
+    required Logger logger,
     String cwd = '.',
     bool recursive = false,
-    required Logger logger,
   }) async {
     if (!recursive) {
       final pubspec = File(p.join(cwd, 'pubspec.yaml'));
@@ -47,9 +47,9 @@ class Dart {
   }
 
   static Future<void> packagesGet({
+    required Logger logger,
     String cwd = '.',
     bool recursive = false,
-    required Logger logger,
   }) async {
     await _runCommand(
       cmd: (cwd) async {
@@ -81,9 +81,9 @@ class Dart {
   }
 
   static Future<void> format({
+    required Logger logger,
     String cwd = '.',
     bool recursive = false,
-    required Logger logger,
   }) async {
     await _runCommand(
       cmd: (cwd) async {
@@ -108,9 +108,9 @@ class Dart {
   }
 
   static Future<void> buildRunner({
+    required Logger logger,
     String cwd = '.',
     bool recursive = false,
-    required Logger logger,
   }) async {
     await _runCommand(
       cmd: (cwd) async {

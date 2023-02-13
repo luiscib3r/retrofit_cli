@@ -15,9 +15,9 @@ class Flutter {
   }
 
   static Future<void> packagesGet({
+    required Logger logger,
     String cwd = '.',
     bool recursive = false,
-    required Logger logger,
   }) async {
     await _runCommand(
       cmd: (cwd) async {
@@ -49,9 +49,9 @@ class Flutter {
   }
 
   static Future<void> buildRunner({
+    required Logger logger,
     String cwd = '.',
     bool recursive = false,
-    required Logger logger,
   }) async {
     await _runCommand(
       cmd: (cwd) async {
